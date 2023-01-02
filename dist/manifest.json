@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Vite crxjs boilerplate",
+  "description": "",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/contentScripts.js-loader.e4ac512a.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "assets/contentScripts.js.924ea084.js"
+      ],
+      "use_dynamic_url": true
+    }
+  ]
+}

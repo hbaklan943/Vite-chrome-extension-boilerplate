@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Vite crxjs boilerplate",
+    "description": "",
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "src/assets/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/assets/contentScripts.js"
+            ]
+        }
+    ],
+    "version": "1.0.0",
+    "action": {
+        "default_popup": "index.html"
+    }
+}
